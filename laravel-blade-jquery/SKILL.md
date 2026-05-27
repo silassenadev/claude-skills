@@ -17,23 +17,7 @@ motor de templates e jQuery para interatividade no frontend.
 
 ---
 
-## 1. Pré-requisitos
-
-Antes de começar, verifique se o ambiente tem:
-
-- PHP >= 8.2
-- Composer >= 2.x
-- Node.js >= 18 + npm (para assets)
-- Banco de dados configurado (MySQL, SQLite, etc.)
-
-Comando de verificação rápida:
-```bash
-php -v && composer -V && node -v && npm -v
-```
-
----
-
-## 2. Criação do Projeto
+## 1. Criação do Projeto
 
 ```bash
 composer create-project laravel/laravel nome-do-projeto
@@ -54,7 +38,7 @@ DB_PASSWORD=
 
 ---
 
-## 3. Estrutura de Diretórios Recomendada
+## 2. Estrutura de Diretórios Recomendada
 
 ```
 nome-do-projeto/
@@ -82,7 +66,7 @@ nome-do-projeto/
 
 ---
 
-## 4. Layout Principal com Blade
+## 3. Layout Principal com Blade
 
 Crie `resources/views/layouts/app.blade.php`:
 
@@ -131,7 +115,7 @@ Crie `resources/views/layouts/app.blade.php`:
 
 ---
 
-## 5. Alertas Flash (partial reutilizável)
+## 4. Alertas Flash (partial reutilizável)
 
 Crie `resources/views/layouts/partials/alerts.blade.php`:
 
@@ -163,7 +147,7 @@ Crie `resources/views/layouts/partials/alerts.blade.php`:
 
 ---
 
-## 6. Controller CRUD padrão
+## 5. Controller CRUD padrão
 
 ```bash
 php artisan make:controller NomeController --resource
@@ -233,7 +217,7 @@ class NomeController extends Controller
 
 ---
 
-## 7. Rotas (routes/web.php)
+## 6. Rotas (routes/web.php)
 
 ```php
 <?php
@@ -253,7 +237,7 @@ Route::post('/nomes/ajax-acao', [NomeController::class, 'ajaxAcao'])
 
 ---
 
-## 8. jQuery + AJAX no Blade
+## 7. jQuery + AJAX no Blade
 
 Exemplo de uma view que usa jQuery para chamadas assíncronas:
 
@@ -327,7 +311,7 @@ $(function () {
 
 ---
 
-## 9. Migration de exemplo
+## 8. Migration de exemplo
 
 ```php
 Schema::create('nomes', function (Blueprint $table) {
@@ -346,7 +330,7 @@ php artisan migrate
 
 ---
 
-## 10. Comandos úteis de referência rápida
+## 9. Comandos úteis de referência rápida
 
 | Ação                        | Comando                                      |
 |-----------------------------|----------------------------------------------|
